@@ -1,0 +1,129 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  padding: 30px;
+  width: 350px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.container:hover {
+  transform: translateY(-5px);
+}
+
+h2 {
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  text-align: left;
+  color: #fff;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  transition: 0.3s;
+}
+
+input:focus {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background: #ff7eb3;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #ff4f8b;
+}
+
+a {
+  display: block;
+  color: #fff;
+  margin-top: 10px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+a:hover {
+  color: #ff4f8b;
+}
+
+/* Forms Styling */
+.forget-password-form, .login-form, .signup-form, .profile-page {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Profile Page */
+.profile-page h2 {
+  color: #fff;
+}
+
+.profile-page a {
+  display: inline-block;
+  background: #ff4f8b;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.profile-page a:hover {
+  background: #ff1f5a;
+}

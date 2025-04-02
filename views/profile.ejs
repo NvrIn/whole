@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome, <%= user.name %>!</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/auth/logout">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Your Profile</h2>
+            <p>Email: <%= user.email %></p>
+
+            <% if (carbonData) { %>
+                <h3>Your Latest Carbon Footprint</h3>
+                <p>Electricity Usage: <%= carbonData.electricity %> kWh</p>
+                <p>Gas Usage: <%= carbonData.gas %> therms</p>
+                <p>Transport: <%= carbonData.transport %> miles</p>
+                <p>Carbon Footprint: <%= carbonData.footprint %> tonnes/year</p>
+                <p>Recorded on: <%= carbonData.timestamp %></p>
+            <% } else { %>
+                <p>No carbon footprint data available yet.</p>
+            <% } %>
+
+            <% if (consultationData) { %>
+                <h3>Your Latest Consultation Request</h3>
+                <p>First Name: <%= consultationData.first_name %></p>
+                <p>Last Name: <%= consultationData.last_name %></p>
+                <p>Email: <%= consultationData.email %></p>
+                <p>Phone: <%= consultationData.phone %></p>
+                <p>Consultation Date: <%= consultationData.date %></p>
+                <p>Notes: <%= consultationData.notes %></p>
+                <p>Requested on: <%= consultationData.timestamp %></p>
+            <% } else { %>
+                <p>No consultation request made yet.</p>
+            <% } %>
+        </section>
+    </main>
+</body>
+</html>

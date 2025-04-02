@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carbon Footprint Calculator</title>
+    <link rel="stylesheet" href="style_c.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">Roles Technology</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Carbon Calculator</a></li>
+                <li><a href="#">Solutions</a></li>
+                <li><a href="#">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="calculator">
+            <h1>Calculate Your Carbon Footprint</h1>
+            <div class="form-container">
+                <form id="carbonForm">
+                    <label for="electricity">Electricity Usage (kWh):</label>
+                    <input type="number" id="electricity" required placeholder="Enter kWh">
+                    
+                    <label for="gas">Gas Usage (therms):</label>
+                    <input type="number" id="gas" required placeholder="Enter therms">
+                    
+                    <label for="transport">Transport (miles driven):</label>
+                    <input type="number" id="transport" required placeholder="Enter miles">
+                    
+                    <button type="submit" class="btn-primary">Calculate Impact</button>
+                </form>
+                <div class="result">
+                    <h2>Your Carbon Footprint</h2>
+                    <p><span id="carbonOutput">2.5</span> tonnes/year</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="tracking">
+            <h2>Usage Tracking</h2>
+            <div class="charts">
+                <div class="chart-card">
+                    <canvas id="monthlyTrend"></canvas>
+                </div>
+                <div class="chart-card">
+                    <canvas id="usageBreakdown"></canvas>
+                </div>
+            </div>
+        </section>
+        
+        <section class="recommendations">
+            <h2>Recommendations</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>Use LED Bulbs</h3>
+                    <p>LED bulbs consume less energy and last longer than traditional bulbs.</p>
+                </div>
+                <div class="card">
+                    <h3>Switch to Electric Vehicles</h3>
+                    <p>Reduce your carbon footprint by switching to an electric vehicle.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+</html>
